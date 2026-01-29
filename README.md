@@ -25,8 +25,11 @@ Pagamentos em infoprodutos exigem:
 - Auditoria e reconciliação, precisa existir rastro do que foi calculado e repassado.
 - Arquitetura orientada a eventos, mesmo que simulada.
 
+
 ==============================
+
 DESAFIO: Mini Split Engine + Ledger + Outbox
+
 ==============================
 
 Você vai implementar uma API pequena que:
@@ -205,6 +208,7 @@ Estrutura sugerida do repositório
 -------------------------
 Você pode organizar como preferir. Sugestão:
 
+```
 cakto-mini-split-engine/
   README.md
   requirements.txt (ou pyproject.toml)
@@ -219,6 +223,7 @@ cakto-mini-split-engine/
     models.py
     tests/
       test_payments.py
+```
 
 -------------------------
 Seção obrigatória no README: decisões técnicas
