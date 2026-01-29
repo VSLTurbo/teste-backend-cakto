@@ -25,9 +25,9 @@ Pagamentos em infoprodutos exigem:
 - Auditoria e reconciliação, precisa existir rastro do que foi calculado e repassado.
 - Arquitetura orientada a eventos, mesmo que simulada.
 
-========================================
+==============================
 DESAFIO: Mini Split Engine + Ledger + Outbox
-========================================
+==============================
 
 Você vai implementar uma API pequena que:
 1) Calcula taxas e split.
@@ -78,6 +78,8 @@ Header:
 - Idempotency-Key: <string>
 
 Body (exemplo):
+
+```json
 {
   "amount": "297.00",
   "currency": "BRL",
@@ -88,8 +90,11 @@ Body (exemplo):
     { "recipient_id": "affiliate_9", "role": "affiliate", "percent": 30 }
   ]
 }
+```
 
 Response (exemplo):
+
+```json
 {
   "payment_id": "pmt_123",
   "status": "captured",
@@ -105,6 +110,7 @@ Response (exemplo):
     "status": "pending"
   }
 }
+```
 
 Opcional: Simular cálculo (não persiste)
 POST /api/v1/checkout/quote
